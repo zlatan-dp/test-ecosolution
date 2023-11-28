@@ -25,4 +25,9 @@ export const BurgerButton = styled.button`
   background-image: url(${BurgerSvg});
   background-repeat: no-repeat;
   background-position: center;
+  transition: var(--transition-bg);
+
+  &:hover {
+    background-color: ${p => p.theme.colors.acCol};
+  }
 `;

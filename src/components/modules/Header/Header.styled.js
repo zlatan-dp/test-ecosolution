@@ -2,10 +2,14 @@ import styled from 'styled-components';
 import BurgerSvg from 'img/Menu-burger.svg';
 
 export const HeaderBox = styled.header`
-  /* position: fixed; */
-  display: flex;
-  /* justify-content: space-between; */
+  position: fixed;
+  width: 100%;
   padding-top: 36px;
+`;
+
+export const HeaderWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const Logo = styled.img`

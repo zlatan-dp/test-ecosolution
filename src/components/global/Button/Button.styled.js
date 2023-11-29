@@ -19,6 +19,13 @@ export const Btn = styled.button`
   text-align: justify;
   letter-spacing: -0.04em;
   color: ${p => p.theme.colors.mainCol};
+
+  transition: var(--transition-bg), var(--transition-color);
+
+  &:hover {
+    background-color: ${p => p.theme.colors.mainCol};
+    color: ${p => p.theme.colors.acCol};
+  }
 `;
 
 export const BtnEl = styled.div`

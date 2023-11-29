@@ -5,6 +5,7 @@ export const HeaderBox = styled.header`
   position: fixed;
   width: 100%;
   padding-top: 36px;
+  background-color: ${p => p.theme.colors.white};
 `;
 
 export const HeaderWrap = styled.div`

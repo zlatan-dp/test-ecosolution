@@ -9,6 +9,7 @@ html {
   --gray-bg: #eaedf1;
 
   --transition-bg: background-color 300ms ease-in-out;
+  --transition-color: color 300ms ease-in-out;
 }
 
 * {

@@ -3,6 +3,7 @@ import BurgerSvg from 'img/Menu-burger.svg';
 
 export const HeaderBox = styled.header`
   position: fixed;
+  z-index: 5;
   width: 100%;
   padding-top: 36px;
   background-color: ${p => p.theme.colors.white};

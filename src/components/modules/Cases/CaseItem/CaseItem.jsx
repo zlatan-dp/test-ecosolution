@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   CaseItemWrap,
   ItemImg,
@@ -10,26 +12,33 @@ import {
   CaseNameText,
 } from './CaseItem.styled';
 
-import CaseImg01 from 'img/cases/caseImg01.jpg';
+// import imgage from 'img/cases/caseImg01.jpg';
 
-export const CaseItem = () => {
+export const CaseItem = ({ img, location, name, date }) => {
   return (
     <CaseItemWrap>
       <ItemImgWrap>
-        <ItemImg src={CaseImg01} />
+        <ItemImg src={img} />
       </ItemImgWrap>
       <ItemInfoWrap>
         <LocationWrap>
-          <LocationName>
-            Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”
-          </LocationName>
+          <LocationName>{location}</LocationName>
           <LocationBtn />
         </LocationWrap>
         <CaseNameWrap>
-          <CaseNameText>Wind Power for auto field irrigation</CaseNameText>
-          <CaseNameText>July 2023</CaseNameText>
+          <CaseNameText>{name}</CaseNameText>
+          <CaseNameText>{date}</CaseNameText>
         </CaseNameWrap>
       </ItemInfoWrap>
     </CaseItemWrap>
   );
+};
+
+CaseItem.propTypes = {
+  caseData: PropTypes.shape({
+    img: PropTypes.string,
+    location: PropTypes.string,
+    name: PropTypes.string,
+    date: PropTypes.string,
+  }),
 };

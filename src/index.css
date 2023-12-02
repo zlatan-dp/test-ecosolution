@@ -77,3 +77,27 @@ section {
 .hidden {
   overflow: hidden;
 }
+
+/* ----- swiper pagination----- */
+
+.swiper {
+  position: relative;
+  padding-top: 88px;
+}
+
+.swiper-pagination-fraction {
+  position: absolute;
+  top: 39px;
+  left: 0;
+  color: hsla(164, 45%, 16%, 0.25);
+  font-family: 'Fira Sans';
+  font-size: 28px;
+  font-weight: 300;
+  /* display: block; */
+}
+
+.swiper-pagination-current {
+  color: var(--main-color);
+}
+
+/* ---------- */

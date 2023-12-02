@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "img": "https://firebasestorage.googleapis.com/v0/b/ecosolution-a0061.appspot.com/o/cases%2FcaseImg01.jpg?alt=media&token=0c4e2590-815b-4a1c-92e0-a312567a6572",
+    "location": "Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
+    "name": "Wind Power for auto field irrigation",
+    "date": "July 2023"
+  },
+  {
+    "id": "2",
+    "img": "https://firebasestorage.googleapis.com/v0/b/ecosolution-a0061.appspot.com/o/cases%2FcaseImg02.jpg?alt=media&token=0f0a3e16-8d24-4348-ae44-77cfa44a0b30",
+    "location": "Zhytomyr city Private Enterprise “Bosch”",
+    "name": "Solar Panels for industrial use",
+    "date": "November 2023"
+  },
+  {
+    "id": "3",
+    "img": "https://firebasestorage.googleapis.com/v0/b/ecosolution-a0061.appspot.com/o/cases%2FcaseImg03.jpg?alt=media&token=ef906159-2ab8-42bd-9d69-46ab8b5b563d",
+    "location": "Rivne city Private Enterprise “Biotech”",
+    "name": "Thermal modules",
+    "date": "October 2023"
+  },
+  {
+    "id": "4",
+    "img": "https://firebasestorage.googleapis.com/v0/b/ecosolution-a0061.appspot.com/o/cases%2FcaseImg04.jpg?alt=media&token=7d24b4a6-1e45-449e-a747-98134a73e7c2",
+    "location": "Kherson city Private Enterprise “HealthyFarm”",
+    "name": "Wind power",
+    "date": "September 2021"
+  },
+  {
+    "id": "5",
+    "img": "https://firebasestorage.googleapis.com/v0/b/ecosolution-a0061.appspot.com/o/cases%2FcaseImg05.jpg?alt=media&token=30f5591d-8b5c-4b9c-babb-4e8f8cea624e",
+    "location": "Zaporizhia city Private Enterprise “Biotech”",
+    "name": "Mini nuclear stations",
+    "date": "May 2021"
+  }
+]

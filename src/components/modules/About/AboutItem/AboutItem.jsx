@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 export const AboutItem = ({ title, ico, children }) => {
   return (
     <AboutItemWrap>
-      <AboutItemTitle ico={ico}>{title}</AboutItemTitle>
+      <AboutItemTitle $ico={ico}>{title}</AboutItemTitle>
       <AboutItemText>{children}</AboutItemText>
     </AboutItemWrap>
   );

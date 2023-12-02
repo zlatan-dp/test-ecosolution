@@ -24,7 +24,7 @@ export const AboutItemTitle = styled.h3`
     display: inline-block;
     width: 16px;
     height: 16px;
-    background-image: url(${p => p.ico});
+    background-image: url(${p => p.$ico});
     background-repeat: no-repeat;
     background-size: cover;
   }

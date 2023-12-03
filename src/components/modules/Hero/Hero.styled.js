@@ -32,3 +32,5 @@ export const InfoWrap = styled.div`
   align-items: center;
   gap: 8px;
 `;
+
+export const HeroImg = styled.img``;

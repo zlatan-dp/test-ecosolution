@@ -13,7 +13,7 @@ export const SwiperBtnWrap = styled.div`
   gap: 12px;
 `;
 
-export const SwiperBtn = styled.div`
+export const SwiperBtn = styled.button`
   width: 66px;
   height: 66px;
   display: flex;
@@ -23,6 +23,8 @@ export const SwiperBtn = styled.div`
   border: 1px solid ${p => p.theme.colors.mainCol};
   border-radius: 50%;
   color: ${p => p.theme.colors.mainCol};
+  background-color: ${p => p.theme.colors.white};
+  transition: var(--transition-border), var(--transition-color);
 
   &:hover {
     border: 1px solid ${p => p.theme.colors.acCol};

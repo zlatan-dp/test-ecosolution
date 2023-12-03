@@ -1,9 +1,14 @@
 import { Container } from 'components/global/Container/Container';
 import { Section } from 'components/global/Section/Section';
-import { HeroTitle, BoxWrap, DecorWrap, InfoWrap } from './Hero.styled';
+import {
+  HeroTitle,
+  BoxWrap,
+  DecorWrap,
+  InfoWrap,
+  HeroImg,
+} from './Hero.styled';
 import { MainText } from 'components/global/MainText/MainText';
 import { Button } from 'components/global/Button/Button';
-import { HeroImg } from 'components/global/Button/Button.styled';
 
 import HeroImgMob from 'img/hero/hero-mob.png';
 

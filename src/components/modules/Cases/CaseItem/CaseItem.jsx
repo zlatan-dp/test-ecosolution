@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { PiArrowUpRight } from 'react-icons/pi';
 
 import {
   CaseItemWrap,
@@ -23,7 +24,9 @@ export const CaseItem = ({ img, location, name, date }) => {
       <ItemInfoWrap>
         <LocationWrap>
           <LocationName>{location}</LocationName>
-          <LocationBtn />
+          <LocationBtn>
+            <PiArrowUpRight size={28} color={'currentColor'} />
+          </LocationBtn>
         </LocationWrap>
         <CaseNameWrap>
           <CaseNameText>{name}</CaseNameText>

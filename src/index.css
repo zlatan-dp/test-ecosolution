@@ -10,6 +10,7 @@ html {
 
   --transition-bg: background-color 300ms ease-in-out;
   --transition-color: color 300ms ease-in-out;
+  --transition-border: border 300ms ease-in-out;
 }
 
 * {

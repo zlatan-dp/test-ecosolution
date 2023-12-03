@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import ArrowRight from 'img/arrow-right.svg';
 
 export const Btn = styled.button`
   display: flex;
@@ -20,11 +19,13 @@ export const Btn = styled.button`
   letter-spacing: -0.04em;
   color: ${p => p.theme.colors.mainCol};
 
-  transition: var(--transition-bg), var(--transition-color);
+  transition: var(--transition-bg), var(--transition-color),
+    var(--transition-border);
 
   &:hover {
     background-color: ${p => p.theme.colors.mainCol};
     color: ${p => p.theme.colors.acCol};
+    border: 1px solid ${p => p.theme.colors.mainCol};
   }
 `;
 
@@ -36,9 +37,5 @@ export const BtnEl = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${p => p.theme.colors.acCol};
-  background-image: url(${ArrowRight});
-  background-repeat: no-repeat;
-  background-position: center;
+  color: ${p => p.theme.colors.mainCol};
 `;
-
-export const HeroImg = styled.img``;

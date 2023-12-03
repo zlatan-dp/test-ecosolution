@@ -1,8 +1,28 @@
 import styled from 'styled-components';
-import ArrowRightUp from 'img/cases/arrow-right-up.svg';
+
+export const LocationBtn = styled.div`
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: ${p => p.theme.colors.acCol};
+  color: ${p => p.theme.colors.mainCol};
+  transition: var(--transition-bg), var(--transition-color);
+`;
 
 export const CaseItemWrap = styled.div`
   background-color: ${p => p.theme.colors.grayBg};
+  cursor: pointer;
+
+  &:hover {
+    ${LocationBtn} {
+      background-color: ${p => p.theme.colors.mainCol};
+      color: ${p => p.theme.colors.acCol};
+    }
+  }
 `;
 
 export const ItemImgWrap = styled.div``;
@@ -17,6 +37,8 @@ export const LocationWrap = styled.div`
   display: flex;
   gap: 61px;
   padding-bottom: 21px;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid ${p => p.theme.colors.acCol};
 `;
 
@@ -27,17 +49,6 @@ export const LocationName = styled.p`
   text-align: justify;
   letter-spacing: -0.04em;
   color: ${p => p.theme.colors.mainCol};
-`;
-
-export const LocationBtn = styled.div`
-  width: 60px;
-  height: 60px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background-color: ${p => p.theme.colors.acCol};
-  background-image: url(${ArrowRightUp});
-  background-repeat: no-repeat;
-  background-position: center;
 `;
 
 export const CaseNameWrap = styled.div`

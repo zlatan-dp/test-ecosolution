@@ -3,6 +3,7 @@ import { Cases } from './modules/Cases/Cases';
 import { Electricity } from './modules/Electricity/Electricity';
 import { Header } from './modules/Header/Header';
 import { Hero } from './modules/Hero/Hero';
+import { Faq } from './modules/Faq/Faq';
 
 export const App = () => {
   return (
@@ -12,6 +13,7 @@ export const App = () => {
       <About />
       <Electricity />
       <Cases />
+      <Faq />
     </>
   );
 };

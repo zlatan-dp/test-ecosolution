@@ -22,7 +22,7 @@ import { ContactForm } from './ContactForm/ContactForm';
 
 export const ContactUs = () => {
   return (
-    <Section>
+    <Section id={'contactUs'}>
       <Container>
         <SectionTitle ta={'center'}>Contact us</SectionTitle>
         <ContactList>

@@ -10,6 +10,8 @@ import { FaqItem } from './FaqItem/FaqItem';
 import { FaqText, ContactUsWrap } from './Faq.styled';
 import { GetButton } from 'components/global/GetButton/GetButton';
 
+import { Link } from 'react-scroll';
+
 export const Faq = () => {
   const [openQuestion, setOpenQuestion] = useState(1);
 
@@ -20,7 +22,7 @@ export const Faq = () => {
   };
 
   return (
-    <Section>
+    <Section id={'faq'}>
       <Container>
         <SectionTitle>Frequently Asked Questions</SectionTitle>
         <ul>
@@ -37,7 +39,16 @@ export const Faq = () => {
         </ul>
         <ContactUsWrap>
           <FaqText>Didn't find the answer to your question?</FaqText>
-          <GetButton>Contact Us</GetButton>
+          <Link
+            activeClass="active"
+            to="contactUs"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <GetButton>Contact Us</GetButton>
+          </Link>
         </ContactUsWrap>
       </Container>
     </Section>

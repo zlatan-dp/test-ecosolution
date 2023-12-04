@@ -23,7 +23,7 @@ export const Cases = () => {
     prevEl: '.swiper-button-p',
   };
   return (
-    <Section>
+    <Section id={'cases'}>
       <Container>
         <SectionTitle>Successful cases of our company</SectionTitle>
 

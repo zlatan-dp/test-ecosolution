@@ -12,7 +12,7 @@ import Ranking from 'img/about/ranking.svg';
 
 export const About = () => {
   return (
-    <Section>
+    <Section id={'about'}>
       <Container>
         <SectionTitle>Main values of our company</SectionTitle>
         <Text>

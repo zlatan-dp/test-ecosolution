@@ -10,11 +10,13 @@ import {
 import { MainText } from 'components/global/MainText/MainText';
 import { Button } from 'components/global/Button/Button';
 
+import { Link } from 'react-scroll';
+
 import HeroImgMob from 'img/hero/hero-mob.png';
 
 export const Hero = () => {
   return (
-    <Section pt={'222px'}>
+    <Section id={'hero'} pt={'222px'}>
       <Container>
         <DecorWrap>
           <HeroTitle>RENEWABLE ENERGY For any task</HeroTitle>
@@ -24,7 +26,16 @@ export const Hero = () => {
               sources, generating power generation using energy wind, sun,
               water, biomass
             </MainText>
-            <Button>Learn more</Button>
+            <Link
+              activeClass="active"
+              to="cases"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <Button>Learn more</Button>
+            </Link>
           </BoxWrap>
         </DecorWrap>
         <InfoWrap>

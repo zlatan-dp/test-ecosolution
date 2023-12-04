@@ -10,7 +10,7 @@ export const Btn = styled.button`
   padding: 4px 4px 4px 16px;
   border: 1px solid ${p => p.theme.colors.acCol};
   border-radius: 500px;
-  background-color: ${p => p.theme.colors.white};
+  background-color: transparent;
 
   font-family: 'Fira Sans', sans-serif;
   font-size: 16px;

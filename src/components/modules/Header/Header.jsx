@@ -1,16 +1,22 @@
 import { Container } from 'components/global/Container/Container';
-import { BurgerButton, HeaderBox, HeaderWrap, Logo } from './Header.styled';
-import LogoSvg from 'img/Ecosolution-logo.svg';
+import { Logo } from 'components/global/Logo/Logo';
+import { BurgerButton, HeaderBox, HeaderWrap } from './Header.styled';
+import PropTypes from 'prop-types';
 
-export const Header = () => {
+export const Header = ({ toggleModal }) => {
   return (
     <HeaderBox>
       <Container>
         <HeaderWrap>
-          <Logo src={LogoSvg} />
-          <BurgerButton />
+          <Logo />
+
+          <BurgerButton type="button" onClick={toggleModal} />
         </HeaderWrap>
       </Container>
     </HeaderBox>
   );
+};
+
+Header.propTypes = {
+  toggleModal: PropTypes.func,
 };

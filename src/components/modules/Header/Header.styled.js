@@ -14,11 +14,6 @@ export const HeaderWrap = styled.div`
   justify-content: space-between;
 `;
 
-export const Logo = styled.img`
-  width: 269px;
-  height: 40px;
-`;
-
 export const BurgerButton = styled.button`
   width: 39px;
   height: 39px;

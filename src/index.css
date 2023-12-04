@@ -7,6 +7,7 @@ html {
   --main-color: #173d33;
   --white: #ffffff;
   --gray-bg: #eaedf1;
+  --error: #d28b8b;
 
   --transition-bg: background-color 300ms ease-in-out;
   --transition-color: color 300ms ease-in-out;

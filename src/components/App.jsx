@@ -4,6 +4,7 @@ import { Electricity } from './modules/Electricity/Electricity';
 import { Header } from './modules/Header/Header';
 import { Hero } from './modules/Hero/Hero';
 import { Faq } from './modules/Faq/Faq';
+import { ContactUs } from './modules/ContactUs/ContactUs';
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
       <Electricity />
       <Cases />
       <Faq />
+      <ContactUs />
     </>
   );
 };

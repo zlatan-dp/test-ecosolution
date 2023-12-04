@@ -5,5 +5,6 @@ export const theme = {
     mainCol: 'var(--main-color)',
     white: 'var(--white)',
     grayBg: 'var(--gray-bg)',
+    error: 'var(--error)',
   },
 };

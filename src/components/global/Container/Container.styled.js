@@ -7,4 +7,7 @@ export const ContainerBox = styled.div`
   min-width: 360px;
   width: 100%;
   /* background-color: red; */
+  @media (min-width: 480px) {
+    width: 480px;
+  }
 `;

@@ -13,13 +13,11 @@ import {
   CaseNameText,
 } from './CaseItem.styled';
 
-// import imgage from 'img/cases/caseImg01.jpg';
-
 export const CaseItem = ({ img, location, name, date }) => {
   return (
     <CaseItemWrap>
       <ItemImgWrap>
-        <ItemImg src={img} />
+        <ItemImg src={img} alt={name} />
       </ItemImgWrap>
       <ItemInfoWrap>
         <LocationWrap>

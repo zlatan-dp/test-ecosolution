@@ -5,7 +5,7 @@ export const Btn = styled.button`
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
-
+  margin-left: ${p => (p.$ml ? p.$ml : 'none')};
   height: 39px;
   padding: 4px 4px 4px 16px;
   border: 1px solid ${p => p.theme.colors.acCol};
@@ -26,6 +26,11 @@ export const Btn = styled.button`
     background-color: ${p => p.theme.colors.mainCol};
     color: ${p => p.theme.colors.acCol};
     border: 1px solid ${p => p.theme.colors.mainCol};
+  }
+
+  &:disabled {
+    background-color: ${p => p.theme.colors.grayBg};
+    cursor: not-allowed;
   }
 `;
 

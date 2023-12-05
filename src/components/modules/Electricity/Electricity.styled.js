@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const TitleWrap = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const ElWrap = styled.div`
   position: relative;
   display: flex;

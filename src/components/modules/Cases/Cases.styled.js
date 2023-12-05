@@ -1,14 +1,27 @@
 import styled from 'styled-components';
 
-// export const SwiperWrap = styled.div`
-//   padding-top: 88px;
-// `;
+export const CasesBox = styled.div`
+  position: relative;
+`;
 
-export const SwiperBtnWrap = styled.div`
+export const SwiperCustomWrap = styled.div`
+  width: 100%;
   position: absolute;
-  top: 0;
+  top: 100px;
   right: 0;
   z-index: 999;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  @media (min-width: 768px) {
+    width: 49%;
+    top: 20px;
+    border-left: 1px solid ${p => p.theme.colors.acCol};
+    padding-left: 8px;
+  }
+`;
+
+export const SwiperBtnWrap = styled.div`
   display: flex;
   gap: 12px;
 `;
@@ -29,5 +42,22 @@ export const SwiperBtn = styled.button`
   &:hover {
     border: 1px solid ${p => p.theme.colors.acCol};
     color: ${p => p.theme.colors.acCol};
+  }
+`;
+
+export const PaginationWrap = styled.div`
+  color: hsla(164, 45%, 16%, 0.25);
+  font-family: 'Fira Sans';
+  font-size: 28px;
+  font-weight: 300;
+  /* .swiper-pagination-custom {
+  } */
+
+  .my-current-class {
+    color: var(--main-color);
+  }
+
+  .my-total-class {
+    /* Стилізація для всього чисельника фракції */
   }
 `;

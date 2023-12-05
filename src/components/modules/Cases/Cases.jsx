@@ -15,7 +15,13 @@ import 'swiper/css';
 // import 'swiper/css/navigation';
 // import 'swiper/swiper-bundle.css';
 
-import { SwiperBtn, SwiperBtnWrap } from './Cases.styled';
+import {
+  SwiperBtn,
+  SwiperBtnWrap,
+  PaginationWrap,
+  SwiperCustomWrap,
+  CasesBox,
+} from './Cases.styled';
 
 export const Cases = () => {
   const navigationOptions = {
@@ -25,35 +31,111 @@ export const Cases = () => {
   return (
     <Section id={'cases'}>
       <Container>
-        <SectionTitle>Successful cases of our company</SectionTitle>
+        <CasesBox>
+          <SectionTitle width={'264px'}>
+            Successful cases of our company
+          </SectionTitle>
 
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          loop={true}
-          pagination={{
-            type: 'fraction',
-          }}
-          navigation={navigationOptions}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          {casesData.map(({ id, img, location, name, date }) => (
-            <SwiperSlide key={id}>
-              <CaseItem img={img} location={location} name={name} date={date} />
-            </SwiperSlide>
-          ))}
-
-          <SwiperBtnWrap>
-            <SwiperBtn className="swiper-button-p">
-              <PiArrowLeftLight size={36} color="currentColor" />
-            </SwiperBtn>
-            <SwiperBtn className="swiper-button-n">
-              <PiArrowRightLight size={36} color="currentColor" />
-            </SwiperBtn>
-          </SwiperBtnWrap>
-        </Swiper>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              el: '.swiper-pagination-custom', //
+              type: 'custom',
+              renderCustom: function (swiper, current, total) {
+                return (
+                  '<span class="my-current-class">' +
+                  current +
+                  '</span>' +
+                  ' / ' +
+                  '<span class="my-total-class">' +
+                  total +
+                  '</span>'
+                );
+              },
+            }}
+            navigation={navigationOptions}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+            }}
+          >
+            {casesData.map(({ id, img, location, name, date }) => (
+              <SwiperSlide key={id}>
+                <CaseItem
+                  img={img}
+                  location={location}
+                  name={name}
+                  date={date}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <SwiperCustomWrap>
+            <PaginationWrap className="swiper-pagination-custom" />
+            <SwiperBtnWrap>
+              <SwiperBtn className="swiper-button-p">
+                <PiArrowLeftLight size={36} color="currentColor" />
+              </SwiperBtn>
+              <SwiperBtn className="swiper-button-n">
+                <PiArrowRightLight size={36} color="currentColor" />
+              </SwiperBtn>
+            </SwiperBtnWrap>
+          </SwiperCustomWrap>
+        </CasesBox>
       </Container>
     </Section>
   );
 };
+
+// export const Cases = () => {
+//   const navigationOptions = {
+//     nextEl: '.swiper-button-n',
+//     prevEl: '.swiper-button-p',
+//   };
+//   return (
+//     <Section id={'cases'}>
+//       <Container>
+//         <SectionTitle width={'264px'}>
+//           Successful cases of our company
+//         </SectionTitle>
+
+//         <Swiper
+//           slidesPerView={1}
+//           spaceBetween={30}
+//           loop={true}
+//           pagination={{
+//             type: 'fraction',
+//           }}
+//           navigation={navigationOptions}
+//           modules={[Pagination, Navigation]}
+//           className="mySwiper"
+//           breakpoints={{
+//             768: {
+//               slidesPerView: 2,
+//             },
+//           }}
+//         >
+//           {casesData.map(({ id, img, location, name, date }) => (
+//             <SwiperSlide key={id}>
+//               <CaseItem img={img} location={location} name={name} date={date} />
+//             </SwiperSlide>
+//           ))}
+
+//           <SwiperBtnWrap>
+//             <SwiperBtn className="swiper-button-p">
+//               <PiArrowLeftLight size={36} color="currentColor" />
+//             </SwiperBtn>
+//             <SwiperBtn className="swiper-button-n">
+//               <PiArrowRightLight size={36} color="currentColor" />
+//             </SwiperBtn>
+//           </SwiperBtnWrap>
+//         </Swiper>
+//       </Container>
+//     </Section>
+//   );
+// };

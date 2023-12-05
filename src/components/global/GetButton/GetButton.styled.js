@@ -18,7 +18,15 @@ export const GetBtn = styled.button`
   border-radius: 500px;
   background-color: ${p => p.theme.colors.acCol};
   display: flex;
+  align-items: center;
   gap: 12px;
+
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+
+  text-align: justify;
+  letter-spacing: -0.04em;
+
   transition: var(--transition-bg), var(--transition-color);
   &:hover {
     background-color: ${p => p.theme.colors.mainCol};

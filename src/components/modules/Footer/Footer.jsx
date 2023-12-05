@@ -26,12 +26,13 @@ export const Footer = () => {
         <FooterWrap>
           <LogoWrap>
             <Logo />
+
             <Link
               activeClass="active"
               to="hero"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-100}
               duration={500}
             >
               <UpButton>

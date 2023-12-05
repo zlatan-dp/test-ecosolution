@@ -16,6 +16,7 @@ export const App = () => {
   const toggleModal = () => {
     setShowModal(!showModal);
   };
+
   return (
     <>
       {showModal && (

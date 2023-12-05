@@ -66,12 +66,14 @@ export const ContactUs = () => {
           <ContactItem>
             <ContactTitle>Social Networks:</ContactTitle>
             <SocWrap>
+              `{' '}
               <IconSocWrapper href="https://www.facebook.com/" target="_blank">
                 <FbIcon />
               </IconSocWrapper>
               <IconSocWrapper href="https://www.instagram.com/" target="_blank">
                 <InstaIcon />
               </IconSocWrapper>
+              `
             </SocWrap>
           </ContactItem>
         </ContactList>

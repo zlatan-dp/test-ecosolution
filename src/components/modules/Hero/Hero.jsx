@@ -31,7 +31,7 @@ export const Hero = () => {
               to="cases"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-100}
               duration={500}
             >
               <Button>Learn more</Button>

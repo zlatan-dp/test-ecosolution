@@ -6,12 +6,18 @@ export const HeaderBox = styled.header`
   z-index: 5;
   width: 100%;
   padding-top: 36px;
+  padding-bottom: 36px;
   background-color: ${p => p.theme.colors.white};
 `;
 
 export const HeaderWrap = styled.div`
   display: flex;
   justify-content: space-between;
+`;
+
+export const BtnWrap = styled.div`
+  display: flex;
+  gap: 8px;
 `;
 
 export const BurgerButton = styled.button`

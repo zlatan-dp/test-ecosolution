@@ -36,7 +36,7 @@ export const BurgerMenu = ({ toggleModal }) => {
               to="hero"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-100}
               duration={500}
             >
               Main <PiArrowUpRight size={16} color={'currentColor'} />
@@ -48,7 +48,7 @@ export const BurgerMenu = ({ toggleModal }) => {
               to="about"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-100}
               duration={500}
             >
               About <PiArrowUpRight size={16} color={'currentColor'} />
@@ -60,7 +60,7 @@ export const BurgerMenu = ({ toggleModal }) => {
               to="cases"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-100}
               duration={500}
             >
               Cases <PiArrowUpRight size={16} color={'currentColor'} />
@@ -72,7 +72,7 @@ export const BurgerMenu = ({ toggleModal }) => {
               to="faq"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-100}
               duration={500}
             >
               FAQ <PiArrowUpRight size={16} color={'currentColor'} />
@@ -84,7 +84,7 @@ export const BurgerMenu = ({ toggleModal }) => {
               to="contactUs"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-100}
               duration={500}
             >
               Contact Us <PiArrowUpRight size={16} color={'currentColor'} />

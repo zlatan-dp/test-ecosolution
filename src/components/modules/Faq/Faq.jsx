@@ -44,7 +44,7 @@ export const Faq = () => {
             to="contactUs"
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-100}
             duration={500}
           >
             <GetButton>Contact Us</GetButton>

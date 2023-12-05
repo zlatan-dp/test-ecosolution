@@ -11,9 +11,11 @@ export const HeroTitle = styled.h1`
   text-transform: uppercase;
   color: ${p => p.theme.colors.mainCol};
   width: 286px;
+  line-height: 1;
 
   @media (min-width: 768px) {
     width: 222px;
+    font-size: 48px;
   }
 `;
 
@@ -25,6 +27,7 @@ export const BoxWrap = styled.div`
   flex: 1;
   @media (min-width: 768px) {
     align-items: start;
+    gap: 43px;
   }
 `;
 
@@ -32,11 +35,12 @@ export const DecorWrap = styled.div`
   display: flex;
   gap: 24px;
   flex-direction: column;
-  /* align-items: center; */
   padding-bottom: 24px;
   border-bottom: 1px solid ${p => p.theme.colors.acCol};
 
   @media (min-width: 768px) {
+    align-items: center;
+
     flex-direction: row;
     gap: 0;
   }

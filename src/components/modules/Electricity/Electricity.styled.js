@@ -8,6 +8,10 @@ export const ElWrap = styled.div`
   justify-content: center;
   padding-top: 72px;
 
+  @media (min-width: 768px) {
+    padding-top: 101px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -16,6 +20,10 @@ export const ElWrap = styled.div`
     height: 48px;
     top: 0px;
     background-color: ${p => p.theme.colors.acCol};
+
+    @media (min-width: 768px) {
+      height: 87px;
+    }
   }
 `;
 
@@ -24,6 +32,10 @@ export const ElNumber = styled.p`
   font-size: 48px;
   font-weight: 700;
   color: ${p => p.theme.colors.acCol};
+
+  @media (min-width: 768px) {
+    font-size: 100px;
+  }
 `;
 
 export const ElKwh = styled.p`
@@ -31,4 +43,7 @@ export const ElKwh = styled.p`
   font-size: 24px;
   font-weight: 400;
   color: ${p => p.theme.colors.mainCol};
+  @media (min-width: 768px) {
+    font-size: 28px;
+  }
 `;

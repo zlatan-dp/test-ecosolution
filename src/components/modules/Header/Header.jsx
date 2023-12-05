@@ -7,7 +7,7 @@ import { GetButton } from 'components/global/GetButton/GetButton';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 
-export const Header = ({ toggleModal }) => {
+export const Header = ({ toggleModal, showModal }) => {
   const isTablet = useMediaQuery({ minWidth: 768 });
   return (
     <HeaderBox>
@@ -15,7 +15,8 @@ export const Header = ({ toggleModal }) => {
         <HeaderWrap>
           <Logo />
           <BtnWrap>
-            <BurgerButton type="button" onClick={toggleModal} />
+            {!showModal && <BurgerButton type="button" onClick={toggleModal} />}
+
             {isTablet && (
               <Link
                 activeClass="active"
@@ -37,4 +38,5 @@ export const Header = ({ toggleModal }) => {
 
 Header.propTypes = {
   toggleModal: PropTypes.func,
+  showModal: PropTypes.bool,
 };

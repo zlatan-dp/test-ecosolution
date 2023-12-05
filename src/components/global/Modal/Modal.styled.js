@@ -21,6 +21,9 @@ export const ModalWrap = styled.div`
   @media (min-width: 480px) {
     width: 480px;
   }
+  @media (min-width: 768px) {
+    width: 768px;
+  }
 `;
 
 export const ModalContent = styled.div`

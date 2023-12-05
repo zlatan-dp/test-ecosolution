@@ -25,7 +25,7 @@ export const App = () => {
         </Modal>
       )}
 
-      <Header toggleModal={toggleModal} />
+      <Header toggleModal={toggleModal} showModal={showModal} />
       <Hero />
       <About />
       <Electricity />

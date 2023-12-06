@@ -28,7 +28,7 @@ export const About = () => {
       <Container>
         <TextTilteWrap>
           <TilteWrap>
-            <SectionTitle width={'200px'}>
+            <SectionTitle width={'220px'}>
               Main values of our company
             </SectionTitle>
           </TilteWrap>

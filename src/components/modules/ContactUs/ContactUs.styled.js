@@ -1,11 +1,27 @@
 import styled from 'styled-components';
 import { Text } from 'components/global/MainText/MainText.styled';
 
+export const ContactBox = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 24px;
+  }
+`;
+
+export const FormtBox = styled.div`
+  @media (min-width: 768px) {
+    flex: 1;
+  }
+`;
+
 export const ContactList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 24px;
   margin-bottom: 24px;
+  @media (min-width: 768px) {
+    flex: 1;
+  }
 `;
 
 export const ContactItem = styled.li`

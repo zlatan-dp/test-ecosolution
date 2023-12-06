@@ -11,6 +11,8 @@ import {
   ContactWrap,
   SocWrap,
   IconSocWrapper,
+  ContactBox,
+  FormtBox,
 } from './ContactUs.styled';
 
 import { ReactComponent as FbIcon } from 'img/socIcons/facebook.svg';
@@ -25,59 +27,67 @@ export const ContactUs = () => {
     <Section id={'contactUs'}>
       <Container>
         <SectionTitle ta={'center'}>Contact us</SectionTitle>
-        <ContactList>
-          <ContactItem>
-            <ContactTitle>Phone:</ContactTitle>
-            <PhonesWrap>
-              <ContactWrap href="tel:+80981234567">
+        <ContactBox>
+          <ContactList>
+            <ContactItem>
+              <ContactTitle>Phone:</ContactTitle>
+              <PhonesWrap>
+                <ContactWrap href="tel:+80981234567">
+                  <IconWrapper>
+                    <PhoneIcon />
+                  </IconWrapper>
+                  <ContactText>38 (098) 12 34 567</ContactText>
+                </ContactWrap>
+                <ContactWrap href="tel:+80931234567">
+                  <IconWrapper>
+                    <PhoneIcon />
+                  </IconWrapper>
+                  <ContactText>38 (093) 12 34 567</ContactText>
+                </ContactWrap>
+              </PhonesWrap>
+            </ContactItem>
+            <ContactItem>
+              <ContactTitle>E-mail:</ContactTitle>
+              <ContactWrap href="mailto:office@ecosolution.com">
                 <IconWrapper>
-                  <PhoneIcon />
+                  <MailIcon />
                 </IconWrapper>
-                <ContactText>38 (098) 12 34 567</ContactText>
+                <ContactText>office@ecosolution.com</ContactText>
               </ContactWrap>
-              <ContactWrap href="tel:+80931234567">
+            </ContactItem>
+            <ContactItem>
+              <ContactTitle>Address:</ContactTitle>
+              <ContactWrap href="https://www.google.com/maps/" target="_blank">
                 <IconWrapper>
-                  <PhoneIcon />
+                  <MapIcon />
                 </IconWrapper>
-                <ContactText>38 (093) 12 34 567</ContactText>
+                <ContactText>
+                  79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
+                </ContactText>
               </ContactWrap>
-            </PhonesWrap>
-          </ContactItem>
-          <ContactItem>
-            <ContactTitle>E-mail:</ContactTitle>
-            <ContactWrap href="mailto:office@ecosolution.com">
-              <IconWrapper>
-                <MailIcon />
-              </IconWrapper>
-              <ContactText>office@ecosolution.com</ContactText>
-            </ContactWrap>
-          </ContactItem>
-          <ContactItem>
-            <ContactTitle>Address:</ContactTitle>
-            <ContactWrap href="https://www.google.com/maps/" target="_blank">
-              <IconWrapper>
-                <MapIcon />
-              </IconWrapper>
-              <ContactText>
-                79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
-              </ContactText>
-            </ContactWrap>
-          </ContactItem>
-          <ContactItem>
-            <ContactTitle>Social Networks:</ContactTitle>
-            <SocWrap>
-              `{' '}
-              <IconSocWrapper href="https://www.facebook.com/" target="_blank">
-                <FbIcon />
-              </IconSocWrapper>
-              <IconSocWrapper href="https://www.instagram.com/" target="_blank">
-                <InstaIcon />
-              </IconSocWrapper>
-              `
-            </SocWrap>
-          </ContactItem>
-        </ContactList>
-        <ContactForm />
+            </ContactItem>
+            <ContactItem>
+              <ContactTitle>Social Networks:</ContactTitle>
+              <SocWrap>
+                <IconSocWrapper
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                >
+                  <FbIcon />
+                </IconSocWrapper>
+                <IconSocWrapper
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                >
+                  <InstaIcon />
+                </IconSocWrapper>
+              </SocWrap>
+            </ContactItem>
+          </ContactList>
+          <FormtBox>
+            <ContactForm />
+          </FormtBox>
+        </ContactBox>
       </Container>
     </Section>
   );

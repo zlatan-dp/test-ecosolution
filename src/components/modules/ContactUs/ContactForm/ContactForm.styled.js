@@ -12,11 +12,11 @@ export const InputWrap = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-bottom: 28px;
 `;
 
 export const StyledField = styled.input`
   height: 31px;
-  margin-bottom: 28px;
   padding: 8px 0;
   border-bottom: 1px solid
     ${({ $error, theme }) => ($error ? theme.colors.error : theme.colors.acCol)};

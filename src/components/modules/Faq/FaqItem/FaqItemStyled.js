@@ -7,8 +7,7 @@ export const ItemWrap = styled.li`
   border-top: 1px solid ${p => p.theme.colors.acCol};
   &:last-child {
     padding-bottom: 0;
-
-
+  }
 `;
 
 export const QuestionWrap = styled.div`

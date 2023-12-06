@@ -7,13 +7,22 @@ import { SectionTitle } from 'components/global/SectionTitle/SectionTitle';
 import questionsAndAnswers from './FaqData.json';
 import { FaqItem } from './FaqItem/FaqItem';
 
-import { FaqText, ContactUsWrap } from './Faq.styled';
+import {
+  FaqText,
+  ContactUsWrap,
+  FaqList,
+  DecorWrap,
+  FaqBox,
+} from './Faq.styled';
 import { GetButton } from 'components/global/GetButton/GetButton';
 
 import { Link } from 'react-scroll';
+import { useMediaQuery } from 'react-responsive';
 
 export const Faq = () => {
   const [openQuestion, setOpenQuestion] = useState(1);
+  const isMob = useMediaQuery({ maxWidth: 767.9 });
+  const isTablet = useMediaQuery({ minWidth: 768 });
 
   const toggleQuestion = questionId => {
     setOpenQuestion(prevOpenQuestion =>
@@ -24,32 +33,40 @@ export const Faq = () => {
   return (
     <Section id={'faq'}>
       <Container>
-        <SectionTitle>Frequently Asked Questions</SectionTitle>
-        <ul>
-          {questionsAndAnswers.map(({ id, question, answer }) => (
-            <FaqItem
-              key={id}
-              id={id}
-              question={question}
-              answer={answer}
-              isOpen={openQuestion === id}
-              onToggle={toggleQuestion}
-            />
-          ))}
-        </ul>
-        <ContactUsWrap>
-          <FaqText>Didn't find the answer to your question?</FaqText>
-          <Link
-            activeClass="active"
-            to="contactUs"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            <GetButton>Contact Us</GetButton>
-          </Link>
-        </ContactUsWrap>
+        <FaqBox>
+          {isMob && <SectionTitle>Frequently Asked Questions</SectionTitle>}
+
+          <FaqList>
+            {questionsAndAnswers.map(({ id, question, answer }) => (
+              <FaqItem
+                key={id}
+                id={id}
+                question={question}
+                answer={answer}
+                isOpen={openQuestion === id}
+                onToggle={toggleQuestion}
+              />
+            ))}
+          </FaqList>
+          <DecorWrap>
+            {isTablet && (
+              <SectionTitle>Frequently Asked Questions</SectionTitle>
+            )}
+            <ContactUsWrap>
+              <FaqText>Didn't find the answer to your question?</FaqText>
+              <Link
+                activeClass="active"
+                to="contactUs"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                <GetButton>Contact Us</GetButton>
+              </Link>
+            </ContactUsWrap>
+          </DecorWrap>
+        </FaqBox>
       </Container>
     </Section>
   );

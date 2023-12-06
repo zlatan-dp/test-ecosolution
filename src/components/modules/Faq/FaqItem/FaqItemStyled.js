@@ -2,8 +2,13 @@ import styled from 'styled-components';
 import { Text } from 'components/global/MainText/MainText.styled';
 
 export const ItemWrap = styled.li`
-  padding: 17px 0;
+  padding-top: 17px;
+  padding-bottom: 17px;
   border-top: 1px solid ${p => p.theme.colors.acCol};
+  &:last-child {
+    padding-bottom: 0;
+
+
 `;
 
 export const QuestionWrap = styled.div`

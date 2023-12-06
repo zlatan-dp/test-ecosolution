@@ -9,7 +9,7 @@ export const SwiperCustomWrap = styled.div`
   position: absolute;
   top: 100px;
   right: 0;
-  z-index: 10;
+  z-index: 4;
   display: flex;
   align-items: end;
   justify-content: space-between;

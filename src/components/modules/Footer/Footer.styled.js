@@ -13,9 +13,21 @@ export const FooterWrap = styled.div`
   border-top: 1px solid ${p => p.theme.colors.acCol};
 `;
 
-export const LogoWrap = styled.div`
+export const LogoAndLinksWrap = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  @media (min-width: 768px) {
+    gap: 24px;
+  }
+`;
+
+export const DecorWrap = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
 `;
 
 export const UpButton = styled.button`
@@ -61,11 +73,33 @@ export const SocItem = styled.a`
   }
 `;
 
-export const InfoList = styled.ul`
+export const InfoList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  gap: 16px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    gap: 24px;
+  }
 `;
-export const InfoItem = styled.li``;
+export const InfoItem = styled.div`
+  /* @media (min-width: 768px) {
+    flex: 1;
+  } */
+`;
+
+export const DecorInfoWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+  }
+`;

@@ -85,39 +85,18 @@ section {
 /* ----- swiper pagination----- */
 
 .swiper {
-  padding-top: 92px;
+  padding-top: 116px;
 }
 
 @media (min-width: 768px) {
   .swiper {
-    padding-top: 14px;
+    padding-top: 38px;
   }
 }
-/*
-.swiper-pagination-fraction {
-  position: absolute;
-  top: 39px;
-  left: 0;
-  color: hsla(164, 45%, 16%, 0.25);
-  font-family: 'Fira Sans';
-  font-size: 28px;
-  font-weight: 300;
- display: block;} */
-
-/* .swiper-pagination-current {
-  color: var(--main-color);
-}
-
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .swiper {
-    padding-top: 14px;
+    padding-top: 120px;
   }
+}
 
-  .swiper-pagination-fraction {
-    top: 0px;
-    left: 50%;
-    z-index: 200;
-  }
-} */
-
-/* ---------- */
+/* ----- ------- ----- */

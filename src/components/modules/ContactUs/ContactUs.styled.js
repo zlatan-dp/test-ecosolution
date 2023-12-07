@@ -6,6 +6,9 @@ export const ContactBox = styled.div`
     display: flex;
     gap: 24px;
   }
+  @media (min-width: 1280px) {
+    gap: 48px;
+  }
 `;
 
 export const FormtBox = styled.div`
@@ -22,18 +25,30 @@ export const ContactList = styled.ul`
   @media (min-width: 768px) {
     flex: 1;
   }
+  @media (min-width: 1280px) {
+    gap: 32px;
+  }
 `;
 
 export const ContactItem = styled.li`
   width: 244px;
+  @media (min-width: 1280px) {
+    width: auto;
+  }
 `;
 
 export const ContactTitle = styled(Text)`
   margin-bottom: 8px;
+  @media (min-width: 1280px) {
+    margin-bottom: 16px;
+  }
 `;
 
 export const ContactText = styled(Text)`
   font-size: 20px;
+  @media (min-width: 1280px) {
+    font-size: 24px;
+  }
 `;
 
 export const PhonesWrap = styled.div`
@@ -88,5 +103,9 @@ export const IconSocWrapper = styled.a`
     width: 24px;
     height: 24px;
     transition: var(--transition-color);
+  }
+
+  @media (min-width: 1280px) {
+    padding: 0px;
   }
 `;

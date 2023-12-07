@@ -7,17 +7,20 @@ export const CasesBox = styled.div`
 export const SwiperCustomWrap = styled.div`
   width: 100%;
   position: absolute;
-  top: 100px;
+  top: 80px;
   right: 0;
   z-index: 4;
   display: flex;
   align-items: end;
   justify-content: space-between;
   @media (min-width: 768px) {
-    width: 49%;
-    top: 20px;
+    width: 50%;
+    top: 8px;
     border-left: 1px solid ${p => p.theme.colors.acCol};
     padding-left: 8px;
+  }
+  @media (min-width: 1280px) {
+    padding-left: 161px;
   }
 `;
 
@@ -42,6 +45,11 @@ export const SwiperBtn = styled.button`
   &:hover {
     border: 1px solid ${p => p.theme.colors.acCol};
     color: ${p => p.theme.colors.acCol};
+  }
+
+  @media (min-width: 1280px) {
+    width: 84px;
+    height: 84px;
   }
 `;
 

@@ -6,11 +6,17 @@ export const FaqBox = styled.div`
     display: flex;
     gap: 24px;
   }
+  @media (min-width: 768px) {
+    gap: 48px;
+  }
 `;
 
 export const FaqText = styled(Text)`
   font-size: 18px;
   text-align: center;
+  @media (min-width: 1280px) {
+    font-size: 24px;
+  }
 `;
 
 export const FaqList = styled.ul`
@@ -35,5 +41,8 @@ export const DecorWrap = styled.div`
     align-items: start;
     flex: 1;
     margin-top: 0;
+  }
+  @media (min-width: 1280px) {
+    align-items: center;
   }
 `;

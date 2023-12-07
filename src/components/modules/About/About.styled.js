@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+import { Text } from 'components/global/MainText/MainText.styled';
+
+export const TextAbout = styled(Text)`
+  @media (min-width: 768px) {
+    margin-left: 11px;
+  }
+  @media (min-width: 1280px) {
+    margin-left: 161px;
+  }
+`;
+
 export const TextTilteWrap = styled.div`
   @media (min-width: 768px) {
     display: flex;
@@ -11,8 +22,6 @@ export const TilteWrap = styled.div`
 export const TextWrap = styled.div`
   flex: 1;
   @media (min-width: 768px) {
-    padding-left: 11px;
-
     border-left: 1px solid ${p => p.theme.colors.acCol};
   }
 `;
@@ -35,6 +44,11 @@ export const AboutGridWrap = styled.div`
     & > *:nth-child(4) {
       grid-column: span 2;
     }
+  }
+
+  @media (min-width: 1280px) {
+    grid-row-gap: 48px;
+    grid-column-gap: 48px;
   }
 `;
 

@@ -35,14 +35,16 @@ export const Footer = () => {
             </DecorWrap>
             <DecorWrap>
               {isTablet && (
-                <SocList>
-                  <SocItem href="https://www.facebook.com/" target="_blank">
-                    <FbIcon />
-                  </SocItem>
-                  <SocItem href="https://www.instagram.com/" target="_blank">
-                    <InstaIcon />
-                  </SocItem>
-                </SocList>
+                <InfoItem>
+                  <SocList>
+                    <SocItem href="https://www.facebook.com/" target="_blank">
+                      <FbIcon />
+                    </SocItem>
+                    <SocItem href="https://www.instagram.com/" target="_blank">
+                      <InstaIcon />
+                    </SocItem>
+                  </SocList>
+                </InfoItem>
               )}
 
               <Link
@@ -71,19 +73,16 @@ export const Footer = () => {
           )}
           <InfoList>
             <DecorInfoWrap>
-              <InfoItem>
-                <MainText>
-                  79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
-                </MainText>
-              </InfoItem>
+              <MainText>
+                79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
+              </MainText>
             </DecorInfoWrap>
             <DecorInfoWrap>
               <InfoItem>
                 <MainText>office@ecosolution.com</MainText>
               </InfoItem>
-              <InfoItem>
-                <MainText>ecosolution © 2023</MainText>
-              </InfoItem>
+
+              <MainText>ecosolution © 2023</MainText>
             </DecorInfoWrap>
           </InfoList>
         </FooterWrap>

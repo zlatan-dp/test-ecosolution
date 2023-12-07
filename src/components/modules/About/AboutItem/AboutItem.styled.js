@@ -1,8 +1,15 @@
 import styled from 'styled-components';
+import { Text } from 'components/global/MainText/MainText.styled';
 
 export const AboutItemWrap = styled.div`
   padding: 13px 12px 12px 12px;
   background-color: ${p => p.theme.colors.grayBg};
+  @media (min-width: 768px) {
+    padding: 12px;
+  }
+  @media (min-width: 1280px) {
+    padding: 48px 24px 24px 24px;
+  }
 `;
 
 export const AboutItemTitle = styled.h3`
@@ -38,13 +45,26 @@ export const AboutItemTitle = styled.h3`
     height: 1px;
     background-color: ${p => p.theme.colors.acCol};
   }
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    padding-bottom: 51px;
+  }
+  @media (min-width: 1280px) {
+    padding-bottom: 94px;
+    margin-bottom: 24px;
+    font-size: 32px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+    }
+  }
 `;
 
-export const AboutItemText = styled.p`
-  font-family: 'Fira Sans', sans-serif;
+export const AboutItemText = styled(Text)`
   font-size: 14px;
-  line-height: 1.2;
-  text-align: justify;
-  letter-spacing: -0.04em;
-  color: ${p => p.theme.colors.mainCol};
+  @media (min-width: 1280px) {
+    font-size: 16px;
+  }
 `;

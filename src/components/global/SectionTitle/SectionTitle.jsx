@@ -1,9 +1,9 @@
 import { Title } from './SectionTitle.styled';
 import PropTypes from 'prop-types';
 
-export const SectionTitle = ({ ta = 'left', width, children }) => {
+export const SectionTitle = ({ ta = 'left', width, mb, children }) => {
   return (
-    <Title $ta={ta} $width={width}>
+    <Title $ta={ta} $width={width} $mb={mb}>
       {children}
     </Title>
   );
@@ -12,4 +12,5 @@ export const SectionTitle = ({ ta = 'left', width, children }) => {
 SectionTitle.propTypes = {
   ta: PropTypes.string,
   width: PropTypes.string,
+  mb: PropTypes.string,
 };

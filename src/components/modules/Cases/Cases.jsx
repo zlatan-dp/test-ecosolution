@@ -5,6 +5,7 @@ import { CaseItem } from './CaseItem/CaseItem';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
+import { useMediaQuery } from 'react-responsive';
 
 import { PiArrowRightLight, PiArrowLeftLight } from 'react-icons/pi';
 
@@ -28,17 +29,19 @@ export const Cases = () => {
     nextEl: '.swiper-button-n',
     prevEl: '.swiper-button-p',
   };
+  const isDesctop = useMediaQuery({ minWidth: 1280 });
+
   return (
     <Section id={'cases'}>
       <Container>
         <CasesBox>
-          <SectionTitle width={'264px'}>
+          <SectionTitle width={isDesctop ? '400px' : '264px'} mb={'0px'}>
             Successful cases of our company
           </SectionTitle>
 
           <Swiper
             slidesPerView={1}
-            spaceBetween={30}
+            spaceBetween={24}
             loop={true}
             pagination={{
               el: '.swiper-pagination-custom', //
@@ -60,6 +63,10 @@ export const Cases = () => {
             className="mySwiper"
             breakpoints={{
               768: {
+                slidesPerView: 2,
+              },
+              1280: {
+                spaceBetween: 48,
                 slidesPerView: 2,
               },
             }}

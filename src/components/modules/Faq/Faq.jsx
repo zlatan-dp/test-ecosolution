@@ -23,6 +23,7 @@ export const Faq = () => {
   const [openQuestion, setOpenQuestion] = useState(1);
   const isMob = useMediaQuery({ maxWidth: 767.9 });
   const isTablet = useMediaQuery({ minWidth: 768 });
+  const isDesktop = useMediaQuery({ minWidth: 1280 });
 
   const toggleQuestion = questionId => {
     setOpenQuestion(prevOpenQuestion =>
@@ -50,7 +51,9 @@ export const Faq = () => {
           </FaqList>
           <DecorWrap>
             {isTablet && (
-              <SectionTitle>Frequently Asked Questions</SectionTitle>
+              <SectionTitle width={isDesktop && '399px'}>
+                Frequently Asked Questions
+              </SectionTitle>
             )}
             <ContactUsWrap>
               <FaqText>Didn't find the answer to your question?</FaqText>

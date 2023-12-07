@@ -3,6 +3,13 @@ import styled from 'styled-components';
 export const FooterBox = styled.footer`
   padding-top: 16px;
   padding-bottom: 24px;
+
+  @media (min-width: 768px) {
+    padding-top: 50px;
+  }
+  @media (min-width: 1280px) {
+    padding-top: 60px;
+  }
 `;
 
 export const FooterWrap = styled.div`
@@ -11,6 +18,13 @@ export const FooterWrap = styled.div`
   gap: 24px;
   padding-top: 24px;
   border-top: 1px solid ${p => p.theme.colors.acCol};
+
+  @media (min-width: 768px) {
+    padding-top: 40px;
+  }
+  @media (min-width: 1280px) {
+    padding-top: 44px;
+  }
 `;
 
 export const LogoAndLinksWrap = styled.div`
@@ -20,8 +34,18 @@ export const LogoAndLinksWrap = styled.div`
   @media (min-width: 768px) {
     gap: 24px;
   }
+  @media (min-width: 1280px) {
+    gap: 48px;
+  }
 `;
 
+export const DecorLeftWrap = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+`;
 export const DecorWrap = styled.div`
   @media (min-width: 768px) {
     display: flex;
@@ -85,11 +109,14 @@ export const InfoList = styled.div`
     flex: 1;
     gap: 24px;
   }
+  @media (min-width: 1280px) {
+    gap: 48px;
+  }
 `;
 export const InfoItem = styled.div`
-  /* @media (min-width: 768px) {
-    flex: 1;
-  } */
+  @media (min-width: 1280px) {
+    padding-left: 137px;
+  }
 `;
 
 export const DecorInfoWrap = styled.div`

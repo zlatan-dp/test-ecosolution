@@ -1,5 +1,4 @@
 import { Container } from 'components/global/Container/Container';
-import { Text } from 'components/global/MainText/MainText.styled';
 import { Section } from 'components/global/Section/Section';
 import { SectionTitle } from 'components/global/SectionTitle/SectionTitle';
 import { AboutItem } from './AboutItem/AboutItem';
@@ -9,6 +8,7 @@ import {
   TilteWrap,
   TextWrap,
   AboutImgWrap,
+  TextAbout,
 } from './About.styled';
 
 import CpuCharge from 'img/about/cpu-charge.svg';
@@ -22,24 +22,28 @@ import { useMediaQuery } from 'react-responsive';
 
 export const About = () => {
   const isTablet = useMediaQuery({ minWidth: 768 });
+  const isDesctop = useMediaQuery({ minWidth: 1280 });
 
   return (
     <Section id={'about'}>
       <Container>
         <TextTilteWrap>
           <TilteWrap>
-            <SectionTitle width={'220px'}>
+            <SectionTitle
+              width={isDesctop ? '330px' : '220px'}
+              mb={isTablet || isDesctop ? '0' : '24px'}
+            >
               Main values of our company
             </SectionTitle>
           </TilteWrap>
           <TextWrap>
-            <Text>
+            <TextAbout>
               EcoSolution envisions a world where sustainable energy solutions
               power a brighter and cleaner future for all. We aspire to be at
               the forefront of the global shift towards renewable energy,
               leading the way in innovative technologies that harness the power
               of nature to meet the world's energy needs.
-            </Text>
+            </TextAbout>
           </TextWrap>
         </TextTilteWrap>
 

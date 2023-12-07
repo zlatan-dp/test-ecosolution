@@ -17,7 +17,7 @@ export const HeaderWrap = styled.div`
 
 export const BtnWrap = styled.div`
   display: flex;
-  gap: 8px;
+  gap: 12px;
 `;
 
 export const BurgerButton = styled.button`

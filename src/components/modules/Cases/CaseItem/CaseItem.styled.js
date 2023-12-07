@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Text } from 'components/global/MainText/MainText.styled';
 
 export const LocationBtn = styled.div`
   width: 60px;
@@ -31,6 +32,9 @@ export const ItemImg = styled.img``;
 
 export const ItemInfoWrap = styled.div`
   padding: 24px 12px 12px 12px;
+  @media (min-width: 1280px) {
+    padding: 36px 48px;
+  }
 `;
 
 export const LocationWrap = styled.div`
@@ -40,15 +44,24 @@ export const LocationWrap = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid ${p => p.theme.colors.acCol};
+
+  @media (min-width: 768px) and (max-width: 1280px) {
+    height: 72px;
+  }
+  @media (min-width: 1280px) {
+    padding-bottom: 36px;
+  }
 `;
 
-export const LocationName = styled.p`
-  font-family: 'Fira Sans', sans-serif;
+export const LocationName = styled(Text)`
   font-size: 18px;
-  line-height: 1.2;
-  text-align: justify;
-  letter-spacing: -0.04em;
-  color: ${p => p.theme.colors.mainCol};
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 24px;
+  }
 `;
 
 export const CaseNameWrap = styled.div`
@@ -57,11 +70,12 @@ export const CaseNameWrap = styled.div`
   margin-top: 12px;
 `;
 
-export const CaseNameText = styled.p`
-  font-family: 'Fira Sans', sans-serif;
+export const CaseNameText = styled(Text)`
   font-size: 12px;
-  line-height: 1.2;
-  text-align: justify;
-  letter-spacing: -0.04em;
-  color: ${p => p.theme.colors.mainCol};
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 16px;
+  }
 `;

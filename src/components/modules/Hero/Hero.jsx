@@ -7,7 +7,8 @@ import {
   InfoWrap,
   HeroImg,
   HeroTitleWrap,
-  TextWrap,
+  AdressWrap,
+  MailWrap,
 } from './Hero.styled';
 import { MainText } from 'components/global/MainText/MainText';
 import { Button } from 'components/global/Button/Button';
@@ -17,10 +18,12 @@ import { useMediaQuery } from 'react-responsive';
 
 import HeroImgMob from 'img/hero/hero-mob.jpg';
 import HeroImgTab from 'img/hero/hero-tab.jpg';
+import HeroImgDesk from 'img/hero/hero-desk.jpg';
 
 export const Hero = () => {
   const isMob = useMediaQuery({ maxWidth: 767.9 });
-  const isTablet = useMediaQuery({ minWidth: 768 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279.9 });
+  const isDesktop = useMediaQuery({ minWidth: 1280 });
 
   return (
     <Section id={'hero'} pt={isMob ? '222px' : isTablet ? '240px' : '264px'}>
@@ -48,16 +51,17 @@ export const Hero = () => {
           </BoxWrap>
         </DecorWrap>
         <InfoWrap>
-          <TextWrap>
+          <AdressWrap>
             <MainText>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</MainText>
-          </TextWrap>
-          <TextWrap>
+          </AdressWrap>
+          <MailWrap>
             <MainText>office@ecosolution.com</MainText>
-            {isTablet && <MainText>ecosolution © 2023</MainText>}
-          </TextWrap>
+            {(isTablet || isDesktop) && <MainText>ecosolution © 2023</MainText>}
+          </MailWrap>
         </InfoWrap>
         {isMob && <HeroImg src={HeroImgMob} alt="power generation" />}
         {isTablet && <HeroImg src={HeroImgTab} alt="power generation" />}
+        {isDesktop && <HeroImg src={HeroImgDesk} alt="power generation" />}
       </Container>
     </Section>
   );

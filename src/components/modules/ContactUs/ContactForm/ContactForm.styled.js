@@ -6,6 +6,14 @@ export const StyledForm = styled.div`
 
   padding: 36px 12px;
   background-color: ${p => p.theme.colors.grayBg};
+
+  @media (min-width: 768px) {
+    padding: 36px 24px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 48px;
+  }
 `;
 
 export const InputWrap = styled.div`
@@ -16,7 +24,6 @@ export const InputWrap = styled.div`
 `;
 
 export const StyledField = styled.input`
-  height: 31px;
   padding: 8px 0;
   border-bottom: 1px solid
     ${({ $error, theme }) => ($error ? theme.colors.error : theme.colors.acCol)};
@@ -32,6 +39,11 @@ export const StyledField = styled.input`
   text-align: justify;
   letter-spacing: -0.04em;
   color: ${p => p.theme.colors.mainCol};
+
+  @media (min-width: 1280px) {
+    padding: 12px 0;
+    font-size: 20px;
+  }
 `;
 
 export const StyledArea = styled.textarea`
@@ -52,6 +64,11 @@ export const StyledArea = styled.textarea`
   text-align: justify;
   letter-spacing: -0.04em;
   color: ${p => p.theme.colors.mainCol};
+
+  @media (min-width: 1280px) {
+    padding: 12px 0;
+    font-size: 20px;
+  }
 `;
 
 export const StyledError = styled.div`

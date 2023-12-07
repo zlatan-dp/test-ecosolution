@@ -23,6 +23,11 @@ export const ModalWrap = styled.div`
   }
   @media (min-width: 768px) {
     width: 768px;
+    padding: 0px 30px;
+  }
+  @media (min-width: 1280px) {
+    width: 1280px;
+    padding: 0px 20px;
   }
 `;
 

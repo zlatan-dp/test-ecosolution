@@ -36,8 +36,8 @@ export const Header = ({ toggleModal, showModal }) => {
 
   const getRandomColor = () => {
     const min = 100;
-    const max = 200;
-    return `rgb(${Math.floor(Math.random() * (240 - 250 + 1)) + min}, ${
+    const max = 150;
+    return `rgb(${Math.floor(Math.random() * (50 - 40 + 1)) + 40}, ${
       Math.floor(Math.random() * (max - min + 1)) + min
     }, 0, 0.7)`;
   };

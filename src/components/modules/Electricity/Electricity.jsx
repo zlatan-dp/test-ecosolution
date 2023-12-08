@@ -14,9 +14,13 @@ export const Electricity = () => {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   };
 
+  const getRandomNum = () => {
+    return Math.floor(Math.random() * (500 - 1 + 1)) + 1;
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setCounter(prev => prev + 1);
+      setCounter(prev => prev + getRandomNum());
     }, 1000);
 
     return () => clearInterval(interval);

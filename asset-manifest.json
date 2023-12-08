@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/test-ecosolution/static/css/main.4f5177c2.css",
-    "main.js": "/test-ecosolution/static/js/main.51315817.js",
+    "main.js": "/test-ecosolution/static/js/main.ef5df0c3.js",
     "static/media/hero-desk.jpg": "/test-ecosolution/static/media/hero-desk.ba6d427292c9db31412b.jpg",
     "static/media/hero-tab.jpg": "/test-ecosolution/static/media/hero-tab.52674b0b82b02594c72d.jpg",
     "static/media/about-img2.jpg": "/test-ecosolution/static/media/about-img2.28fd1a7a9c0383320458.jpg",
@@ -20,10 +20,10 @@
     "static/media/sms.svg": "/test-ecosolution/static/media/sms.c81dc1778c24f6e3ed7d83430fe217e2.svg",
     "static/media/Menu-burger.svg": "/test-ecosolution/static/media/Menu-burger.03e96d8790194653b6ccfb63ad04f462.svg",
     "main.4f5177c2.css.map": "/test-ecosolution/static/css/main.4f5177c2.css.map",
-    "main.51315817.js.map": "/test-ecosolution/static/js/main.51315817.js.map"
+    "main.ef5df0c3.js.map": "/test-ecosolution/static/js/main.ef5df0c3.js.map"
   },
   "entrypoints": [
     "static/css/main.4f5177c2.css",
-    "static/js/main.51315817.js"
+    "static/js/main.ef5df0c3.js"
   ]
 }

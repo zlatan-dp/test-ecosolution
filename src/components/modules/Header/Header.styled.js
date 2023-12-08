@@ -5,12 +5,11 @@ export const HeaderBox = styled.header`
   position: fixed;
   z-index: 5;
   width: 100%;
-  padding-top: 36px;
-  padding-bottom: 36px;
-  background-color: ${p => p.theme.colors.white};
 `;
 
 export const HeaderWrap = styled.div`
+  padding-top: 36px;
+  padding-bottom: 36px;
   display: flex;
   justify-content: space-between;
 `;

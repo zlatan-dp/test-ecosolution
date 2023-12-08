@@ -11,6 +11,6 @@ export const SectionTitle = ({ ta = 'left', width, mb, children }) => {
 
 SectionTitle.propTypes = {
   ta: PropTypes.string,
-  width: PropTypes.string,
+  width: PropTypes.any,
   mb: PropTypes.string,
 };

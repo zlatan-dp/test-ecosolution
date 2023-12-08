@@ -4,11 +4,12 @@ import { BurgerButton, HeaderBox, HeaderWrap, BtnWrap } from './Header.styled';
 import PropTypes from 'prop-types';
 import { GetButton } from 'components/global/GetButton/GetButton';
 
-import { useMediaQuery } from 'react-responsive';
+import { useMediaScreen } from 'components/hooks/useMediaScreen';
+
 import { Link } from 'react-scroll';
 
 export const Header = ({ toggleModal, showModal }) => {
-  const isTablet = useMediaQuery({ minWidth: 768 });
+  const { isTablet } = useMediaScreen();
   return (
     <HeaderBox>
       <Container>

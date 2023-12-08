@@ -14,7 +14,7 @@ import {
 import { Logo } from 'components/global/Logo/Logo';
 
 import { Link } from 'react-scroll';
-import { useMediaQuery } from 'react-responsive';
+import { useMediaScreen } from 'components/hooks/useMediaScreen';
 
 import { ReactComponent as FbIcon } from 'img/socIcons/facebook.svg';
 import { ReactComponent as InstaIcon } from 'img/socIcons/instagram.svg';
@@ -23,8 +23,8 @@ import { PiArrowUp } from 'react-icons/pi';
 import { MainText } from 'components/global/MainText/MainText';
 
 export const Footer = () => {
-  const isMob = useMediaQuery({ maxWidth: 767.9 });
-  const isTablet = useMediaQuery({ minWidth: 768 });
+  const { isTablet, isMob } = useMediaScreen();
+
   return (
     <FooterBox>
       <Container>

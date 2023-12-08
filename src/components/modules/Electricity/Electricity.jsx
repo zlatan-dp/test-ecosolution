@@ -4,11 +4,11 @@ import { SectionTitle } from 'components/global/SectionTitle/SectionTitle';
 import { ElKwh, ElNumber, ElWrap, TitleWrap } from './Electricity.styled';
 import { useState, useEffect } from 'react';
 
-import { useMediaQuery } from 'react-responsive';
+import { useMediaScreen } from 'components/hooks/useMediaScreen';
 
 export const Electricity = () => {
   const [Counter, setCounter] = useState(113447814);
-  const isDesktop = useMediaQuery({ minWidth: 1280 });
+  const { isDesktop } = useMediaScreen();
 
   const formatNumber = number => {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');

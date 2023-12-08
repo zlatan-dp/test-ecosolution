@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 import { ModalBackdrop, ModalContent, ModalWrap } from './Modal.styled';
 import { createPortal } from 'react-dom';
 
@@ -33,4 +35,8 @@ export const Modal = ({ toggleModal, children }) => {
     </ModalBackdrop>,
     modalRoot
   );
+};
+
+Modal.propTypes = {
+  toggleModal: PropTypes.func,
 };

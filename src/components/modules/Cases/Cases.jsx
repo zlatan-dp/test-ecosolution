@@ -5,7 +5,7 @@ import { CaseItem } from './CaseItem/CaseItem';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
-import { useMediaQuery } from 'react-responsive';
+import { useMediaScreen } from 'components/hooks/useMediaScreen';
 
 import { PiArrowRightLight, PiArrowLeftLight } from 'react-icons/pi';
 
@@ -29,13 +29,13 @@ export const Cases = () => {
     nextEl: '.swiper-button-n',
     prevEl: '.swiper-button-p',
   };
-  const isDesctop = useMediaQuery({ minWidth: 1280 });
+  const { isDesktop } = useMediaScreen();
 
   return (
     <Section id={'cases'}>
       <Container>
         <CasesBox>
-          <SectionTitle width={isDesctop ? '400px' : '264px'} mb={'0px'}>
+          <SectionTitle width={isDesktop ? '400px' : '264px'} mb={'0px'}>
             Successful cases of our company
           </SectionTitle>
 
@@ -44,7 +44,7 @@ export const Cases = () => {
             spaceBetween={24}
             loop={true}
             pagination={{
-              el: '.swiper-pagination-custom', //
+              el: '.swiper-pagination-custom',
               type: 'custom',
               renderCustom: function (swiper, current, total) {
                 return (
@@ -98,51 +98,3 @@ export const Cases = () => {
     </Section>
   );
 };
-
-// export const Cases = () => {
-//   const navigationOptions = {
-//     nextEl: '.swiper-button-n',
-//     prevEl: '.swiper-button-p',
-//   };
-//   return (
-//     <Section id={'cases'}>
-//       <Container>
-//         <SectionTitle width={'264px'}>
-//           Successful cases of our company
-//         </SectionTitle>
-
-//         <Swiper
-//           slidesPerView={1}
-//           spaceBetween={30}
-//           loop={true}
-//           pagination={{
-//             type: 'fraction',
-//           }}
-//           navigation={navigationOptions}
-//           modules={[Pagination, Navigation]}
-//           className="mySwiper"
-//           breakpoints={{
-//             768: {
-//               slidesPerView: 2,
-//             },
-//           }}
-//         >
-//           {casesData.map(({ id, img, location, name, date }) => (
-//             <SwiperSlide key={id}>
-//               <CaseItem img={img} location={location} name={name} date={date} />
-//             </SwiperSlide>
-//           ))}
-
-//           <SwiperBtnWrap>
-//             <SwiperBtn className="swiper-button-p">
-//               <PiArrowLeftLight size={36} color="currentColor" />
-//             </SwiperBtn>
-//             <SwiperBtn className="swiper-button-n">
-//               <PiArrowRightLight size={36} color="currentColor" />
-//             </SwiperBtn>
-//           </SwiperBtnWrap>
-//         </Swiper>
-//       </Container>
-//     </Section>
-//   );
-// };

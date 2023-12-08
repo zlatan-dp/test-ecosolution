@@ -14,16 +14,14 @@ import { MainText } from 'components/global/MainText/MainText';
 import { Button } from 'components/global/Button/Button';
 
 import { Link } from 'react-scroll';
-import { useMediaQuery } from 'react-responsive';
+import { useMediaScreen } from 'components/hooks/useMediaScreen';
 
 import HeroImgMob from 'img/hero/hero-mob.jpg';
 import HeroImgTab from 'img/hero/hero-tab.jpg';
 import HeroImgDesk from 'img/hero/hero-desk.jpg';
 
 export const Hero = () => {
-  const isMob = useMediaQuery({ maxWidth: 767.9 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279.9 });
-  const isDesktop = useMediaQuery({ minWidth: 1280 });
+  const { isMob, isTablet, isTabletOnly, isDesktop } = useMediaScreen();
 
   return (
     <Section id={'hero'} pt={isMob ? '222px' : isTablet ? '240px' : '264px'}>
@@ -60,7 +58,7 @@ export const Hero = () => {
           </MailWrap>
         </InfoWrap>
         {isMob && <HeroImg src={HeroImgMob} alt="power generation" />}
-        {isTablet && <HeroImg src={HeroImgTab} alt="power generation" />}
+        {isTabletOnly && <HeroImg src={HeroImgTab} alt="power generation" />}
         {isDesktop && <HeroImg src={HeroImgDesk} alt="power generation" />}
       </Container>
     </Section>

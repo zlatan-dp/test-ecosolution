@@ -17,12 +17,10 @@ import MaximizeCircle from 'img/about/maximize-circle.svg';
 import Ranking from 'img/about/ranking.svg';
 import Image1 from 'img/about/about-img1.jpg';
 import Image2 from 'img/about/about-img2.jpg';
-
-import { useMediaQuery } from 'react-responsive';
+import { useMediaScreen } from 'components/hooks/useMediaScreen';
 
 export const About = () => {
-  const isTablet = useMediaQuery({ minWidth: 768 });
-  const isDesctop = useMediaQuery({ minWidth: 1280 });
+  const { isTablet, isDesktop } = useMediaScreen();
 
   return (
     <Section id={'about'}>
@@ -30,8 +28,8 @@ export const About = () => {
         <TextTilteWrap>
           <TilteWrap>
             <SectionTitle
-              width={isDesctop ? '330px' : '220px'}
-              mb={isTablet || isDesctop ? '0' : '24px'}
+              width={isDesktop ? '330px' : '220px'}
+              mb={isTablet || isDesktop ? '0' : '24px'}
             >
               Main values of our company
             </SectionTitle>

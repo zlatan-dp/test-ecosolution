@@ -17,13 +17,11 @@ import {
 import { GetButton } from 'components/global/GetButton/GetButton';
 
 import { Link } from 'react-scroll';
-import { useMediaQuery } from 'react-responsive';
+import { useMediaScreen } from 'components/hooks/useMediaScreen';
 
 export const Faq = () => {
   const [openQuestion, setOpenQuestion] = useState(1);
-  const isMob = useMediaQuery({ maxWidth: 767.9 });
-  const isTablet = useMediaQuery({ minWidth: 768 });
-  const isDesktop = useMediaQuery({ minWidth: 1280 });
+  const { isMob, isTablet, isDesktop } = useMediaScreen();
 
   const toggleQuestion = questionId => {
     setOpenQuestion(prevOpenQuestion =>
